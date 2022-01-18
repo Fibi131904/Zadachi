@@ -18,3 +18,16 @@ for (let key in salaries){
     sum += salaries [key];
     }
     alert (sum);
+
+
+    let group = {
+        Olga: 200,
+        Nikita: 140,
+        Julia: 190,
+        Anna : 169
+    };
+    let sum =0;
+    for (let key in group) {
+        sum += group [key];
+    }
+    alert(sum);
