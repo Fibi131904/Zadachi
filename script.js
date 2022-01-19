@@ -6,28 +6,14 @@
 
 Если объект salaries пуст, то результат должен быть 0
 */
+function greetings() {
+  alert("Hello world!")
+}
+greetings()
 
-let salaries = {
-    John: 100,
-    Ann: 160,
-    Pete: 130
-  };
+// Используйте это .lengthсвойство, чтобы подсчитать количество символов в lastNameпеременной и присвоить ее lastNameLength.
+let lastNameLength = 0;
+const lastName = "Lovelace";
+// Only change code below this line
 
-let sum = 0;
-for (let key in salaries){
-    sum += salaries [key];
-    }
-    alert (sum);
-
-
-    let group = {
-        Olga: 200,
-        Nikita: 140,
-        Julia: 190,
-        Anna : 169
-    };
-    let sum =0;
-    for (let key in group) {
-        sum += group [key];
-    }
-    alert(sum);
+lastNameLength = lastName.length;
