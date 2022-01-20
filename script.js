@@ -1,19 +1,8 @@
-//let myVar = 11;
-//myVar--;
+// дОБрое УтрО
+let string = 'дОБрое УтрО';
+  let stringLower = string.toLowerCase();
+  let firstCharacter = stringLower[0];
+  let firstCharacterUpper = firstCharacter.toUpperCase();
+  let restOfString = stringLower.slice(1);
+   finishStfing = firstCharacterUpper + restOfString;
 
-
-/*Hапишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
-
-Если объект salaries пуст, то результат должен быть 0
-*/
-function greetings() {
-  alert("Hello world!")
-}
-greetings()
-
-// Используйте это .lengthсвойство, чтобы подсчитать количество символов в lastNameпеременной и присвоить ее lastNameLength.
-let lastNameLength = 0;
-const lastName = "Lovelace";
-// Only change code below this line
-
-lastNameLength = lastName.length;
