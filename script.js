@@ -1,26 +1,23 @@
-function testLogicalOr(val) {
+const winsOver = {
+  "rock" : "scissors",
+  "scissors" : "paper",
+  "paper" : "rock"
+};
 
-  if (val < 10 || val > 20) {
-    return "Outside";
-  }
-  return "Inside";
+const rps = (p1, p2) => {
+if (p1 === p2)
+  return "Draw!";
+else if (winsOver[p1] === p2)
+  return "Player 1 won!";
+else
+  return "Player 2 won!";  
+};
+/* Камень ножницы Бумага
+Давайте играть! Вы должны вернуть, какой игрок выиграл! В случае ничьей возврат Draw!.
 
-}
+Примеры:
 
-testLogicalOr(15);
-
-/*
-if (num > 10) {
-  return "No";
-}
-if (num < 5) {
-  return "No";
-}
-return "Yes";
-
-Та же логика может быть записана как:
-
-if (num > 10 || num < 5) {
-  return "No";
-}
-return "Yes"; */
+rps('scissors','paper') // Player 1 won!
+rps('scissors','rock') // Player 2 won!
+rps('paper','paper') // Draw! 
+*/
