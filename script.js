@@ -1,11 +1,16 @@
-function testElseIf(val) {
-  if (val > 10) {  // если верно условие это, верни..
-    return "Greater than 10"; // это
-  } else if (val < 5) {// если это условие верно, верни
-    return "Smaller than 5"; // это
-  } else { // если условия выше не верны, верни
 
-  return "Between 5 and 10"; // это
+function testSize(num) {
+  // Only change code below this line
+ if (num < 5) {
+    return "Tiny";
+  } else if (num < 10) {
+    return "Small";
+  } else if (num < 15) {
+    return "Medium";
+  } else if (num < 20) {
+    return "Large";
+  } else {
+    return "Huge";
   }
 }
-testElseIf(7);
+testSize(7);
