@@ -1,7 +1,14 @@
-function solution(str, ending){
-  return str.endsWith(ending);
+function testElse(val) {
+  let result = "";
+
+
+  if (val > 5) {     // Если val больше 5, то 
+    result = "Bigger than 5";
+  } else {  // Иначе
+    result = "5 or Smaller";
+  }
+  
+  return result;
 }
-/* 
-Завершите решение так, чтобы оно возвращало true,
- если первый переданный аргумент (строка) заканчивается
-  вторым аргументом (тоже строкой)*/
+
+testElse(4); //вызов с параметром 4
