@@ -1,5 +1,3 @@
-function isSquare(n)
-{
-    let result = Math.sqrt(n);
-    return (result % 1 === 0);
-}
+String.prototype.toJadenCase = function() {
+  return this.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+};
