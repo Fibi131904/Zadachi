@@ -1,45 +1,15 @@
-let count = 0;
-
-function cc(card) {
-  switch (card){
-  case 2 :
-  case 3 :
-  case 4 :
-  case 5 :
-  case 6 :
-  count ++;
-  break;
-  case 10 :
-  case 'J' :
-  case 'Q' :
-  case 'K' :
-  case 'K' :
-  case 'A':
-  count --;
-  break;
+function getGrade (s1, s2, s3) {
+  var s = (s1 + s2 + s3) / 3
+  return s >= 90 ? "A" : s >= 80 ? "B" : s >= 70 ? "C" : s >= 60 ? "D" : "F"
 }
- if (count > 0) {
-    return count + " Bet";
-  } else {
-    return count + " Hold";
-  }
- }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
 
-//Второе решение:
-
-function cc(card) {
-
-  var regex = /[JQKA]/;
-  if (card > 1 && card < 7) {
-    count++;
-  } else if (card === 10 || regex.test(card)) {
-    count--;
-  }
-
-  if (count > 0) return count + " Bet";
-  return count + " Hold";
-
-  
+// или
+function getGrade (s1, s2, s3) {
+  avg = (s1+s2+s3)/3;
+  if (avg < 60)  return "F";
+    else if (avg < 70) return "D";
+    else if (avg < 80) return "C";
+    else if (avg < 90) return "B";
+    else return "A";
 }
