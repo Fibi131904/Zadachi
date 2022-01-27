@@ -1,14 +1,45 @@
-function bmi(weight, height) {
-    var result = weight/Math.pow(height,2) 
-    
-    if (result <= 18.5) {
-      return "Underweight";
-    } else if (result <= 25) {
-      return "Normal";
-    } else if (result <= 30) {
-      return "Overweight";
-    } else {
-      return "Obese";
-    }
-    
+let count = 0;
+
+function cc(card) {
+  switch (card){
+  case 2 :
+  case 3 :
+  case 4 :
+  case 5 :
+  case 6 :
+  count ++;
+  break;
+  case 10 :
+  case 'J' :
+  case 'Q' :
+  case 'K' :
+  case 'K' :
+  case 'A':
+  count --;
+  break;
+}
+ if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
   }
+ }
+
+cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+//Второе решение:
+
+function cc(card) {
+
+  var regex = /[JQKA]/;
+  if (card > 1 && card < 7) {
+    count++;
+  } else if (card === 10 || regex.test(card)) {
+    count--;
+  }
+
+  if (count > 0) return count + " Bet";
+  return count + " Hold";
+
+  
+}
